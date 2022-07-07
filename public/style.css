@@ -1,9 +1,109 @@
-body{
-    background-color: aquamarine;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ *{
     margin: 0;
-}
-section{
-    bg
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+ }
 
-}
+ .hero{
+    min-height: 100vh;
+    width: 100%;
+    background-image:linear-gradient(rgba(194, 213, 219, 0.7),rgba(187, 213, 220, 0.7)) ,url(images/home.png)
+    ;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+ }
+ nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+ }
+ nav img {
+    width: 150px;
+
+ }
+ .nav-links{
+    flex: 1;
+    text-align: right;
+ }
+ .nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px;
+    position: relative;
+
+ }
+ .nav-links ul li a{
+    color:rgb(14, 14, 14);
+    text-decoration: none;
+    font-size: 13px;
+ }
+ .nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #989493;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+ }
+ .nav-links ul li:hover::after{
+    width: 100%;
+
+ }
+ .hero-text{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+ }
+ .hero-text h1{
+    font-size: 40px;
+ }
+ .hero-text p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: rgb(42, 72, 76);   
+ }
+ .button{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+
+ }
+ .button:hover{
+    border: 1px solid #66cbd9;
+    background: #66cbd9;
+    transition: 1s;
+    
+ }
+ @media(max-width: 700px){
+    .hero-text h1{
+        font-size: 20px;
+     }
+     .nav-links ul li::after{
+        display: 
+        block;
+     }
+     .nav-links{
+        position: absolute;
+        background:  #66cbd9;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+    }
+ }
